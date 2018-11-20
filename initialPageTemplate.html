@@ -1,0 +1,106 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>dealFinder</title>
+	<link rel="stylesheet" href="css/initialPage.css"/>
+</head>
+
+<style type="text/css">
+	/* To show item */
+	.show {
+		display: block;
+	}
+	/* To hide item */
+	.hide {
+		display: none;
+	}
+</style>
+
+<body>
+	<!-- Header Queens logo, web app name, search bar, drop down many -->
+	<div id = "titleBlock">
+		<img src = "images/logo.jpg" id = "logo">
+		DEALFINDER
+	</div>
+	<!-- "Today's deals" -->
+	<p id = "todaysDeals">Today's Deals</p>
+	<div class = "para" id = "background">
+		
+		<!-- Simple blocks run for loop to repeat this area when in code?-->
+		<div class = "simpleBlock">
+			<img src = "images/kind.png">
+			<div class = "simpleText">
+				<strong>BOGO</strong>
+				<button onclick="showDetails('button1', 'm1')" class="detailButton"> Details </button>
+				<div id="button1" class="detailPanel">
+    				Random Detail 1 <br>
+    				Random Detail 2 <br>
+    				Random Detail 3
+				</div>
+				<p class = "merchant" id = "m1">241 Pizza </p>
+			</div>
+		</div>
+		<div class = "simpleBlock">
+			<img src = "images/kind.png">
+			<div class = "simpleText">
+				<strong>50% OFF</strong>
+				<button onclick="showDetails('button2', 'm2')" class="detailButton"> Details </button>
+				<div id="button2" class="detailPanel">
+    				Random Detail 4 <br>
+    				Random Detail 5 <br>
+    				Random Detail 6
+				</div>
+				<p class = "merchant" id = "m2">iTea</p>
+			</div>
+		</div>
+		<div class = "simpleBlock">
+			<img src = "images/kind.png">
+			<div class = "simpleText">
+				<strong>Free Delivery</strong>
+				<button onclick="showDetails('button3', 'm3')" class="detailButton"> Details </button>
+				<div id="button3" class="detailPanel">
+    				Random Detail 7 <br>
+    				Random Detail 8 <br>
+    				Random Detail 9
+				</div>
+				<p class = "merchant" id = "m3">241 Pizza</p>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	
+	function showDetails(id, merchant) {
+		// Reveals detail panel
+   		document.getElementById(id).classList.toggle("show");
+   		
+   		// Hides merchant name - will be rewritten in detail panel w/ js
+   		var x = document.getElementById(merchant);
+	    if (x.style.display === "none") {
+	        x.style.display = "block";
+	    } else {
+	        x.style.display = "none";
+	    }
+   	}
+
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+		if (!event.target.matches('.detailButton')) {
+
+	    	var dropdowns = document.getElementsByClassName("detailPanel");
+	    	var i;
+		    for (i = 0; i < dropdowns.length; i++) {
+		   		var openDropdown = dropdowns[i];
+		    	if (openDropdown.classList.contains('show')) {
+		    		openDropdown.classList.remove('show');
+		    	}
+			}
+		}
+	}
+
+</script>
+
+</html>
+	
