@@ -3,6 +3,7 @@
 	<meta charset="utf-8">
 	<title>dealFinder</title>
 	<link rel="stylesheet" href="css/initialPage.css"/>
+	<script src="script.js" defer="true"></script>
 </head>
 
 <style type="text/css">
@@ -19,8 +20,15 @@
 <body>
 	<!-- Header Queens logo, web app name, search bar, drop down many -->
 	<div id = "titleBlock">
-		<img src = "images/logo.jpg" id = "logo">
-		DEALFINDER
+		<button id = "menuButton"> <img src = "images/menuExpand.png" class = "headerImage"> </button>
+		<div id = "middle">
+			<img src = "images/logo.jpg" id = "logo">
+			DEALFINDER
+		</div>
+		<div id = "left">
+			<div id = "searchBar"> </div>
+			<button id = "searchButton"> <img src = "images/searchIcon.png" class = "headerImage"> </button>
+		</div>
 	</div>
 	<!-- "Today's deals" -->
 	<p id = "todaysDeals">Today's Deals</p>
@@ -68,39 +76,6 @@
 		</div>
 	</div>
 </body>
-
-<script type="text/javascript">
-	
-	function showDetails(id, merchant) {
-		// Reveals detail panel
-   		document.getElementById(id).classList.toggle("show");
-   		
-   		// Hides merchant name - will be rewritten in detail panel w/ js
-   		var x = document.getElementById(merchant);
-	    if (x.style.display === "none") {
-	        x.style.display = "block";
-	    } else {
-	        x.style.display = "none";
-	    }
-   	}
-
-
-	// Close the dropdown if the user clicks outside of it
-	window.onclick = function(event) {
-		if (!event.target.matches('.detailButton')) {
-
-	    	var dropdowns = document.getElementsByClassName("detailPanel");
-	    	var i;
-		    for (i = 0; i < dropdowns.length; i++) {
-		   		var openDropdown = dropdowns[i];
-		    	if (openDropdown.classList.contains('show')) {
-		    		openDropdown.classList.remove('show');
-		    	}
-			}
-		}
-	}
-
-</script>
 
 </html>
 	
