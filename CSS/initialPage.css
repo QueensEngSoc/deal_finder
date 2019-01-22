@@ -1,0 +1,155 @@
+* {
+	box-sizing: border-box;
+}
+
+div {
+	align-items: center;
+}
+
+/* General styling for all paragraphe elements*/
+p {
+	font-family: "Garomond", sans-serif;
+	text-align: center;
+}
+
+/* Images */
+img {
+	height: 100px;
+	padding-right: 20px;
+}
+
+button {
+	border: unset;
+}
+
+/* Detail button - click to get details */
+button.detailButton {
+	color: blue;
+	text-decoration: underline;
+	background-color: unset;
+	float: right;
+}
+
+/* Parallax effect - for background if needed */
+div.para {
+	overflow-y: scroll;
+	overflow-x: scroll;
+	perspective-origin: top left;
+	background-size: cover;
+	background-position: center; 
+	background-attachment: fixed;
+	transform-style: preserve-3d;
+	position: sticky;
+
+}
+
+/* A simple block */
+div.simpleBlock {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	width: 80%;
+	background-color: rgba(51,51,51, 0.8);
+	justify-content: center;
+}
+
+/* For the text in the simple block */
+div.simpleText {
+	font-family: "Garomond", sans-serif;
+	font-size: 20px;
+	justify-content: center;
+	margin-left: 30px;
+	width: 50%;
+	color: white;
+}
+
+/* For the header panels */
+div.headerPanel {
+	justify-content: center;
+	align-items: center;
+	width: (100/3)%;
+}
+
+/* Merchant - for showing/hiding purposes */
+p.merchant {
+	text-align: left;
+}
+
+/* To show item - doesn't work unless in <style> WHY */ 
+.show {
+	display: block;
+}
+
+/* Normally hidden details */
+.detailPanel {
+	display: none;
+	/*position: absolute;*/ /*If you want the panel to not displace stuff underneath (cover it) */
+	min-width: 160px;
+    overflow: auto;
+    color: white;
+    font-size: 16px;
+}
+
+.titleOption {
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	font-family: "Garomond", sans-serif;
+	font-size: 36px;
+	background-color: #813bcc;
+	color: white;
+}
+
+/* Logo */
+#logo {
+	height: 40px;
+}
+
+
+/* Menu Button */
+#menuButton {
+	float: left;
+	width: 30px;
+	background-color: unset;
+	margin-right: 5px;
+}
+
+/* Menu Image */
+img.headerImage {
+	height: 40px;
+}
+
+/* logo and page title */
+#middle {
+	align-items: center;
+}
+
+/* search bar panel*/
+#left {
+	float: right;
+}
+
+
+
+
+/* Block containing all the deals */
+#contentBlock {
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(51, 51, 51, 0.7);
+	align-items: center;
+}
+
+/* For the heading todays deals */
+#todaysDeals {
+	font-size: 36px;
+}
+
+/* Parallax dealing with backgrounds */
+#background {
+	background-image: url(../images/background.jpg);
+	/*background-color: purple;*/
+}
