@@ -1,0 +1,160 @@
+* {
+	box-sizing: border-box;
+}
+
+img {
+	object-fit: contain;
+	height: 100%;
+	max-width: 100%;
+}
+
+div {
+	align-items: center;
+}
+
+/* General styling for all paragraphe elements*/
+p {
+	font-family: "Garomond", sans-serif;
+	text-align: center;
+}
+
+/* Images */
+img.itemImage{
+	height: 100px;
+}
+
+button {
+	border: unset;
+	align-items: center;
+	background-color: inherit;
+	padding: 2%;
+}
+
+/* Detail button - click to get details */
+button.detailButton {
+	color: blue;
+	text-decoration: underline;
+	background-color: unset;
+	float: right;
+}
+
+/* Parallax effect - for background if needed */
+div.para {
+	overflow-y: scroll;
+	overflow-x: scroll;
+	perspective-origin: top left;
+	background-size: cover;
+	background-position: center; 
+	background-attachment: fixed;
+	transform-style: preserve-3d;
+	position: sticky;
+
+}
+
+/* An item */
+div.item {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	/*padding-bottom: 10px;
+	padding-top: 10px;*/
+	width: 80%;
+	height: 20%;
+	background-color: rgba(51,51,51, 0.8);
+	justify-content: center;
+
+}
+
+/* For the text in the item*/
+div.itemText {
+	font-family: "Garomond", sans-serif;
+	font-size: 20px;
+	justify-content: center;
+	margin-left: 30px;
+	width: 50%;
+	color: white;
+}
+
+
+/* Merchant - for showing/hiding purposes */
+p.merchant {
+	text-align: left;
+}
+
+/* Normally hidden details */
+.detailPanel {
+	/*position: absolute;*/ /*If you want the panel to not displace stuff underneath (cover it) */
+	overflow: auto;
+    color: white;
+    font-size: 16px;
+}
+
+section.title {
+	height: 7%;
+	display: flex;
+	justify-content: space-between;
+	font-family: "Garomond", sans-serif;
+	font-size: 36px;
+	background-color: #9553dc;
+	color: white;
+}
+
+section.content {
+	height: unset;
+}
+
+/* Logo */
+#logo {
+	height: 40px;
+}
+
+
+/* Menu Button */
+#menuButton {
+	float: left;
+	width: 30px;
+	background-color: unset;
+	margin-right: 10px;
+}
+
+.right {
+	float: right;
+	display: flex;
+}
+/* search bar panel*/
+.left {
+	display: flex;
+}
+
+
+#searchButton {
+	margin-right: 0;
+	margin-left: 1%;
+	max-height: 95%;
+}
+
+/* Block containing all the deals */
+#contentBlock {
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(51, 51, 51, 0.7);
+	align-items: center;
+}
+
+/* For the heading todays deals */
+h2 {
+	font-size: 2em;
+	text-align: center;
+}
+
+/* Parallax dealing with backgrounds */
+#background {
+	background-image: url(../images/background.jpg);
+	/*background-color: purple;*/
+}
+
+
+.inactive {
+	display: none !important;
+}
