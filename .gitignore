@@ -1,5 +1,5 @@
 # Ignore These Files
 .DS_Store
 
-./scripts/node_modules
-./scripts/package_lock
+scripts/node_modules/
+scripts/package-lock.json
