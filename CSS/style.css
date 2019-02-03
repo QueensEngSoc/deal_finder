@@ -1,3 +1,7 @@
+body {
+	margin: unset;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -48,7 +52,6 @@ div.para {
 	background-attachment: fixed;
 	transform-style: preserve-3d;
 	position: sticky;
-
 }
 
 /* An item */
@@ -62,6 +65,8 @@ div.item {
 	height: 20%;
 	background-color: rgba(51,51,51, 0.8);
 	justify-content: center;
+	align-items: unset;
+	padding-top: 5%;
 
 }
 
