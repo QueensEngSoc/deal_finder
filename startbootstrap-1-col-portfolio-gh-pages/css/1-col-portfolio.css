@@ -1,5 +1,21 @@
+/*!
+ * Start Bootstrap - 1 Col Portfolio (https://startbootstrap.com/template-overviews/1-col-portfolio)
+ * Copyright 2013-2018 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-1-col-portfolio/blob/master/LICENSE)
+ */
+
 body {
-	margin: unset;
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.pagination {
+  margin-bottom: 15px;
 }
 
 * {
@@ -8,8 +24,8 @@ body {
 
 img {
 	object-fit: contain;
-	height: 100%;
-	max-width: 100%;
+	max-height: 30%;
+	max-width: 50%;
 }
 
 div {
@@ -20,6 +36,10 @@ div {
 p {
 	font-family: "Garomond", sans-serif;
 	text-align: center;
+}
+
+.nav-item {
+	display: flex;
 }
 
 /* Images */
@@ -35,10 +55,10 @@ button {
 }
 
 /* Detail button - click to get details */
-button.detailButton {
-	color: blue;
+.detailButton {
+	color: white;
+	background-color: #007bff;
 	text-decoration: underline;
-	background-color: unset;
 	float: right;
 }
 
@@ -52,6 +72,11 @@ div.para {
 	background-attachment: fixed;
 	transform-style: preserve-3d;
 	position: sticky;
+
+}
+
+h3 {
+	display: inline;
 }
 
 /* An item */
@@ -65,9 +90,6 @@ div.item {
 	height: 20%;
 	background-color: rgba(51,51,51, 0.8);
 	justify-content: center;
-	align-items: unset;
-	padding-top: 5%;
-	position: unset;
 
 }
 
@@ -89,10 +111,10 @@ p.merchant {
 
 /* Normally hidden details */
 .detailPanel {
+	/*position: absolute;*/ /*If you want the panel to not displace stuff underneath (cover it) */
 	overflow: auto;
     color: white;
     font-size: 16px;
-    padding: 2%;
 }
 
 section.title {
@@ -134,10 +156,12 @@ section.content {
 
 
 #searchButton {
-	margin-right: 0;
-	margin-left: 1%;
-	max-height: 95%;
+	object-fit: contain;
+	height: 30px;
+	max-width: 100%;
+	background-image: url("../images/searchIcon.png");
 }
+
 
 /* Block containing all the deals */
 #contentBlock {
@@ -160,7 +184,32 @@ h2 {
 	/*background-color: purple;*/
 }
 
+.dNameButton {
+	margin-bottom: 10px;
+}
+
+.dealPic {
+
+}
 
 .inactive {
 	display: none !important;
+}
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.col-md-5 p {
+	margin-bottom: unset;
+}
+
+.col-md-7 {
+	display: flex;
+	justify-content: center;
 }

@@ -24,7 +24,7 @@ window.onload = function addListeners () {
 	let searchButton = document.querySelector("#searchButton");
 	searchButton.addEventListener('click', getSBValue);
 
-	addDealString("iTea", "BOGO", null, "I hope this works");
+	addDealString("iTea", "BOGO", null, "I hope this works I hope this works I hope this works I hope this works I hope this works I hope this works I hope this works I hope this works I hope this works I hope this works I hope this works I hope this works");
 }
 
 
