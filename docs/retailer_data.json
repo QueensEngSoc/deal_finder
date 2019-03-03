@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Metro",
+        "address": "310 Barrie Street",
+        "tags": [
+            "groceries",
+            "chain"
+        ]
+    },
+    {
+        "name": "The Toucan",
+        "address": "76 Princess Street",
+        "tags": [
+            "pub",
+            "affordable",
+            "beer",
+            "casual"
+        ]
+    }
+]
