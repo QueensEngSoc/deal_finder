@@ -1,0 +1,28 @@
+{
+  "name": "deal_finder",
+  "version": "1.0.0",
+  "description": "## Getting Started",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/essdev-team/deal_finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/essdev-team/deal_finder/issues"
+  },
+  "homepage": "https://github.com/essdev-team/deal_finder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.16"
+  }
+}
