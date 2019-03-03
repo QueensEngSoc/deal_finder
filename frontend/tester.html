@@ -2,77 +2,122 @@
 <head>
 	<meta charset="utf-8">
 	<title>dealFinder</title>
-	<link rel="stylesheet" href="css/initialPage.css"/>
-	<script src="script.js" defer="true"></script>
+	<link rel="stylesheet" href="css/testStyle.css"/>
+	<script src="scripts/script.js" defer="true"></script>
 </head>
-
-<style type="text/css">
-	/* To show item */
-	.show {
-		display: block;
-	}
-</style>
 
 <body>
 	<!-- Header Queens logo, web app name, search bar, drop down many -->
-	<div class = "titleOption">
-		<button id = "menuButton"> <img src = "images/menuExpand.png" class = "headerImage"> </button>
-		<div id = "middle">
-			<img src = "images/logo.jpg" id = "logo">
-			DEALFINDER
+	<section class = "title">
+		<div class = "left">
+			<button> <img src = "images/menuExpand.png" class = "headerImage"> </button>
+			<img src = "images/ITTeamLogoWhite.png" class = "headerImage">
+			<h1>DEALFINDER</h1>
 		</div>
-		<div id = "left">
+		<div class = "right">
 			<div id = "searchBar">
 				<input type = "text" placeholder = "Search..."> </div>
 				<button id = "searchButton" type = "submit"> <img src = "images/searchIcon.png" class = "headerImage"> </button>
 			</div>
 		</div>
-	</div>
+	</section>
+
+	<nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">Deal Finder</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+             <li class="nav-item">
+            
+              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+               <div class="row justify-content-center">
+                  <div class="col-12 col-md-10 col-lg-8">
+                    <form class="card card-sm">
+                      <div class="card-body row no-gutters align-items-center" style="padding:unset">
+                        <!--end of col-->
+                        <div class="col">
+                          <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search...">
+                        </div>
+                        <!--end of col-->
+                        <div class="col-auto">
+                          <button class="btn btn-lg" style = "background-color:gray"type="submit" >Search</button>
+                        </div>
+                        <!--end of col-->
+                      </div>
+                    </form>
+                        <!--end of col-->
+                </div>
+               </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
 	<!-- "Today's deals" -->
-	<p id = "todaysDeals">Today's Deals</p>
-	<div class = "para" id = "background">
-		
-		<!-- Simple blocks run for loop to repeat this area when in code?-->
-		<div class = "simpleBlock">
-			<img src = "images/kind.png">
-			<div class = "simpleText">
-				<strong>BOGO</strong>
-				<button onclick="showDetails('button1', 'm1')" class="detailButton"> Details </button>
-				<div id="button1" class="detailPanel">
-    				Random Detail 1 <br>
-    				Random Detail 2 <br>
-    				Random Detail 3
+	<section class="content">
+		<h2>Today's Deals</h2>
+		<div class = "para" id = "background">
+			
+			<!-- Simple blocks run for loop to repeat this area when in code?-->
+			<div class = "item">
+				<img class = "itemImage" src = "images/kind.png">
+				<div class = "itemText">
+					<strong>BOGO</strong>
+					<button class="detailButton"> Details </button>
+					<div class="detailPanel inactive">
+	    				Random Detail 1 <br>
+	    				Random Detail 2 <br>
+	    				Random Detail 3
+					</div>
+					<p class = "merchant">241 Pizza </p>
 				</div>
-				<p class = "merchant" id = "m1">241 Pizza </p>
+			</div>
+			<div class = "item">
+				<img class = "itemImage" src = "images/kind.png">
+				<div class = "itemText">
+					<strong>50% OFF</strong>
+					<button class="detailButton"> Details </button>
+					<div  class="detailPanel inactive">
+	    				Random Detail 4 <br>
+	    				Random Detail 5 <br>
+	    				Random Detail 6
+					</div>
+					<p class = "merchant">iTea</p>
+				</div>
+			</div>
+			<div class = "item">
+				<img class = "itemImage" src = "images/kind.png">
+				<div class = "itemText">
+					<strong>Free Delivery</strong>
+					<button class="detailButton"> Details </button>
+					<div class="detailPanel inactive">
+	    				Random Detail 7 <br>
+	    				Random Detail 8 <br>
+	    				Random Detail 9
+					</div>
+					<p class = "merchant">241 Pizza</p>
+				</div>
 			</div>
 		</div>
-		<div class = "simpleBlock">
-			<img src = "images/kind.png">
-			<div class = "simpleText">
-				<strong>50% OFF</strong>
-				<button onclick="showDetails('button2', 'm2')" class="detailButton"> Details </button>
-				<div id="button2" class="detailPanel">
-    				Random Detail 4 <br>
-    				Random Detail 5 <br>
-    				Random Detail 6
-				</div>
-				<p class = "merchant" id = "m2">iTea</p>
-			</div>
-		</div>
-		<div class = "simpleBlock">
-			<img src = "images/kind.png">
-			<div class = "simpleText">
-				<strong>Free Delivery</strong>
-				<button onclick="showDetails('button3', 'm3')" class="detailButton"> Details </button>
-				<div id="button3" class="detailPanel">
-    				Random Detail 7 <br>
-    				Random Detail 8 <br>
-    				Random Detail 9
-				</div>
-				<p class = "merchant" id = "m3">241 Pizza</p>
-			</div>
-		</div>
-	</div>
+	</section>
 </body>
 
 </html>
