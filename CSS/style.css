@@ -67,6 +67,7 @@ div.item {
 	justify-content: center;
 	align-items: unset;
 	padding-top: 5%;
+	position: unset;
 
 }
 
@@ -88,10 +89,10 @@ p.merchant {
 
 /* Normally hidden details */
 .detailPanel {
-	/*position: absolute;*/ /*If you want the panel to not displace stuff underneath (cover it) */
 	overflow: auto;
     color: white;
     font-size: 16px;
+    padding: 2%;
 }
 
 section.title {
