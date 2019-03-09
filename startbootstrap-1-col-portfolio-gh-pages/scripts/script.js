@@ -1,9 +1,3 @@
-window.onLoad = function temp () {
-	console.log(10)
-	addDealString("store", "241", "igm","smallDetails","largeDetails");
-}
-
-
 // Gets search bar value
 function getSBValue (event) {
 	let value = document.querySelector(".searchBar").value;
@@ -14,8 +8,9 @@ function getSBValue (event) {
 
 // things that run when loaded
 window.onload = function loaded () {
-	
+	// tests addDealString
 	// addDealString("store", "241", "igm","smallDetails","largeDetails");
+	
 	// for search button
 	let searchButton = document.querySelector(".searchButton");
 	searchButton.addEventListener('click', getSBValue);
