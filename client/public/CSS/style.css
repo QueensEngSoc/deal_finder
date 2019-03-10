@@ -1,0 +1,244 @@
+/*!
+ * Start Bootstrap - 1 Col Portfolio (https://startbootstrap.com/template-overviews/1-col-portfolio)
+ * Copyright 2013-2018 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-1-col-portfolio/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.pagination {
+  margin-bottom: 15px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	object-fit: contain;
+	max-height: 30%;
+	max-width: 50%;
+}
+
+div {
+	align-items: center;
+}
+
+/* General styling for all paragraphe elements*/
+p {
+	font-family: "Garomond", sans-serif;
+	text-align: center;
+}
+
+.nav-item {
+	display: flex;
+}
+
+/* Images */
+img.itemImage{
+	height: 100px;
+}
+
+button {
+	border: unset;
+	align-items: center;
+	background-color: inherit;
+	padding: 2%;
+}
+
+/* Detail button - click to get details */
+.detailButton {
+	color: white;
+	background-color: #007bff;
+	text-decoration: underline;
+	float: right;
+}
+
+/* Parallax effect - for background if needed */
+div.para {
+	overflow-y: scroll;
+	overflow-x: scroll;
+	perspective-origin: top left;
+	background-size: cover;
+	background-position: center; 
+	background-attachment: fixed;
+	transform-style: preserve-3d;
+	position: sticky;
+
+}
+
+h3 {
+	display: inline;
+}
+
+/* An item */
+div.item {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	/*padding-bottom: 10px;
+	padding-top: 10px;*/
+	width: 80%;
+	height: 20%;
+	background-color: rgba(51,51,51, 0.8);
+	justify-content: center;
+
+}
+
+/* For the text in the item*/
+div.itemText {
+	font-family: "Garomond", sans-serif;
+	font-size: 20px;
+	justify-content: center;
+	margin-left: 30px;
+	width: 50%;
+	color: white;
+}
+
+
+/* Merchant - for showing/hiding purposes */
+p.merchant {
+	text-align: left;
+}
+
+/* Normally hidden details */
+.detailPanel {
+	/*position: absolute;*/ /*If you want the panel to not displace stuff underneath (cover it) */
+	overflow: auto;
+    color: white;
+    font-size: 16px;
+}
+
+section.title {
+	height: 7%;
+	display: flex;
+	justify-content: space-between;
+	font-family: "Garomond", sans-serif;
+	font-size: 36px;
+	background-color: #9553dc;
+	color: white;
+}
+
+section.content {
+	height: unset;
+}
+
+/* Logo */
+#logo {
+	height: 40px;
+}
+
+
+/* Menu Button */
+#menuButton {
+	float: left;
+	width: 30px;
+	background-color: unset;
+	margin-right: 10px;
+}
+
+.right {
+	float: right;
+	display: flex;
+}
+/* search bar panel*/
+.left {
+	display: flex;
+}
+
+
+#searchButton {
+	object-fit: contain;
+	height: 30px;
+	max-width: 100%;
+	background-image: url("/images/searchIcon.png");
+}
+.searchButton {
+	background-color: gray;
+}
+
+#navbar {
+	background-color: purple;
+}
+
+/* Block containing all the deals */
+#contentBlock {
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(51, 51, 51, 0.7);
+	align-items: center;
+}
+
+/* For the heading todays deals */
+h2 {
+	font-size: 2em;
+	text-align: center;
+}
+
+.dNameButton {
+	margin-bottom: 10px;
+}
+
+.dealPic {
+
+}
+
+.inactive {
+	display: none !important;
+}
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.col-md-5 p {
+	margin-bottom: unset;
+}
+
+.col-md-7 {
+	display: flex;
+	justify-content: center;
+}
+
+
+#searchBarD {
+	padding: unset;
+}
+
+#pageTitle {
+	margin-top: 10% !important;
+	margin-bottom: unset !important;
+}
+ 
+@media (max-width: 1000px) {
+
+	#pageTitle {
+		margin-top: 12% !important;
+	}
+}
+
+@media (max-width: 768px) {
+
+	#pageTitle {
+		margin-top: 15% !important;
+	}
+}
+
+@media (max-width: 450px) {
+
+	#pageTitle {
+		margin-top: 18% !important;
