@@ -62,18 +62,19 @@ class Gui extends React.Component {
           </div>
           <div className="col-md-5">
             <div className="dNameButton">
-              <h3>Project One</h3>
+              <h3>Loblaws</h3>
               <div className="detailButton btn btn-primary" href="#">
                 View Details
               </div>
             </div>
-            <p>
-              Elements added to the page will have Project One's Layout. Except
-              for the image, which will just be centered.
-              <br /> TO DO: <br /> 1) once we have images, test them <br /> 2)
-              test how adding smth in the database while this is open works ie
-              should i make a load more button
-            </p>
+            <div className="normalDetail">Tuesdays: 10% Off!</div>
+            <div className="extraDetail">
+              <strong>Address: </strong>
+              1100 Princess St, Kingston, ON K7L 5G8
+              <br />
+              <strong>Contact: </strong>
+              (613) 530-3861
+            </div>
           </div>
         </div>
 
@@ -90,18 +91,22 @@ class Gui extends React.Component {
           </div>
           <div className="col-md-5">
             <div className="dNameButton">
-              <h3>Project One</h3>
+              <h3>Metro</h3>
               <div className="detailButton btn btn-primary" href="#">
                 View Details
               </div>
             </div>
-            <p>
-              Elements added to the page will have Project One's Layout. Except
-              for the image, which will just be centered.
-              <br /> TO DO: <br /> 1) once we have images, test them <br /> 2)
-              test how adding smth in the database while this is open works ie
-              should i make a load more button
-            </p>
+            <div className="normalDetail">Tuesday and Thursday: 10% Off for Students!</div>
+            <div className="extraDetail">
+              <strong>Address: </strong>
+              310 Barrie St, Kingston, ON K7L 5L4
+              <br />
+              <strong>Phone: </strong>
+              (613) 542-5795
+              <br/>
+              <strong>Hours: </strong>
+              Open 24 Hours!
+            </div>
           </div>
         </div>
 
