@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "./Components/Navbar";
-// import Gui from "./Components/Gui";  // Not used for now
+import Gui from "./Components/Gui";  // Not used for now
 import Footer from "./Components/Footer";
 
 class App extends Component {
@@ -22,30 +22,30 @@ class App extends Component {
     //   .then(deals => this.setState({ deals }));
   };
 
-  // render () {
-  //   return (
-  //     <div className="entire">
-  //       <Navbar/>
-  //       <Gui />
-  //       <footer/>
-  //     </div>
-  //   );
-  // }
-
-render() {
+  render () {
     return (
       <div className="entire">
-        <Navbar />
-        {this.state.todos.map(todo => (
-          <div>
-              <p>{todo.action}</p>
-            </div>
-
-        ))}
-        <Footer />
+        <Navbar/>
+        <Gui />
+        <footer/>
       </div>
     );
   }
+
+// render() {
+//     return (
+//       <div className="entire">
+//         <Navbar />
+//         {this.state.todos.map(todo => (
+//           <div>
+//               <p>{todo.action}</p>
+//             </div>
+
+//         ))}
+//         <Footer />
+//       </div>
+//     );
+//   }
 
   // render() {
   //   return (
