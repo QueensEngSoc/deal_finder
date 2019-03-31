@@ -15,9 +15,13 @@ const DealSchema = new Schema({
     	type: String,
     	required: [false, "An image is not required"] // Not sure if you need the second statement, can't find online
     },
-    details: {
+    normalDetail: {
     	type: String,
-    	required: [false, "Extra details are not required"] // Not sure if you need the second statement, can't find online
+    	required: [true, "Basic details are required"] // Not sure if you need the second statement, can't find online
+    },
+    extraDetail: {
+    	type: String,
+    	required: [false, "Extra details are not required"];
     }
 })
 

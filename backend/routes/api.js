@@ -34,7 +34,7 @@ router.delete('/todos/:id', (req, res, next) => {
 // router.get('/deals', (req, res, next) => {
 
 //     //this will return all the data, exposing only the id and action field to the client
-//    Deal.find({}, 'dealName', 'merchant', 'image', 'details')
+//    Deal.find({}, 'dealName', 'merchant', 'image', 'normalDetail', 'extraDetail')
 //         .then(data => res.json(data))
 //         .catch(next)
 // });
