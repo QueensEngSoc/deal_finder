@@ -18,10 +18,6 @@ const DealSchema = new Schema({
     normalDetail: {
     	type: String,
     	required: [true, "Basic details are required"] // Not sure if you need the second statement, can't find online
-    },
-    extraDetail: {
-    	type: String,
-    	required: [false, "Extra details are not required"];
     }
 })
 
