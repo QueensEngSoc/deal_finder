@@ -60,6 +60,7 @@ button {
 	background-color: #007bff;
 	text-decoration: underline;
 	float: right;
+	display: none !important;
 }
 
 /* Parallax effect - for background if needed */
@@ -216,6 +217,7 @@ h2 {
 
 
 #searchBarD {
+	margin-left: -30px;
 	padding: unset;
 }
 
@@ -235,6 +237,15 @@ h2 {
 
 	#pageTitle {
 		margin-top: 15% !important;
+	}
+	.extraDetail{
+		display: none !important;
+	}
+	.detailButton{
+		display: block !important;
+	}
+	#searchBarD{
+		margin-left: unset;
 	}
 }
 
