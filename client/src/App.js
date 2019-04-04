@@ -8,7 +8,7 @@ class App extends Component {
     super(props);
     // this.state = { deals: [] }; // empty array, will pull from database later
     // this.state = { todos: [] };
-    this.state = { retailers: [] };
+    this.state = { retailers: [], cycle: 0 };
     //   this.state = {
     //   deals: [
     //     {
@@ -125,6 +125,9 @@ class App extends Component {
                   </a>
                 </div>
                 <div id={deal._id} className="collapse">
+                  <strong>Details: </strong>
+                  {deal.description}
+                  <br />
                   <strong>Address: </strong>
                   {deal.address}
                   <br />

@@ -30,7 +30,7 @@ class Navbar extends React.Component {
 		this.setState({
 			suggestions: this.props.retailers.filter(deal => {
 				return (
-					// deal.description.toLowerCase().includes(value.toLowerCase())||
+					deal.description.toLowerCase().includes(value.toLowerCase())||
 					deal.name.toLowerCase().includes(value.toLowerCase()) ||
 					deal.tags.toLowerCase().includes(value.toLowerCase())
 				);
