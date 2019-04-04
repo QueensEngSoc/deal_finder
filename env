@@ -1,1 +1,0 @@
-DB_MONGO=/usr/local/Cellar/mongodb-community/4.0.8/bin/mongo "mongodb+srv://ESSDEV:essdev1@kdeals-gkguj.mongodb.net/KDeals" --username ESSDEV
