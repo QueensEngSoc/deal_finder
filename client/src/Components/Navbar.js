@@ -1,5 +1,5 @@
 import React from "react";
-import Search from "./Search";
+// import Search from "./Search";
 import AutoSuggest from "react-autosuggest";
 
 function renderSuggestion(s) {
