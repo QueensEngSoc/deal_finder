@@ -104,19 +104,21 @@ class App extends Component {
                 <a href="#">
                   <img
                     className="img-fluid rounded mb-3 mb-md-0"
-                    src={deal.image}
+                    id={"image" + deal._id}
+                    src = {deal.image}
                     alt=""
                   />
+                  
                 </a>
               </div>
               <div className="col-md-5">
                 <div className="dNameButton">
                   <h3>{deal.name}</h3>
                   <a
-                    class="btn btn-primary"
+                    className="btn btn-primary"
                     data-toggle="collapse"
                     href={"#" + deal._id}
-                    id = {"fromSearch" + deal._id}
+                    id={"fromSearch" + deal._id}
                     role="button"
                     aria-expanded="false"
                     style={{ float: "right" }}
@@ -124,7 +126,7 @@ class App extends Component {
                     View Details
                   </a>
                 </div>
-                <div id={deal._id} class="collapse">
+                <div id={deal._id} className="collapse">
                   <strong>Address: </strong>
                   {deal.address}
                   <br />
