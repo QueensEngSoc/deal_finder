@@ -47,7 +47,7 @@ class App extends Component {
   // Also consider moving into GUI.js in components folder for neatness. But also only after it works.
   // Currently doesn't work because there's nothing in the database like this I think
   componentDidMount() {
-    fetch("/api/retailers")
+    fetch("/Retailers")
       .then(res => res.json())
       .then(retailers => this.setState({ retailers }));
 
@@ -91,7 +91,7 @@ class App extends Component {
     return (
       <div className="entire">
         <Navbar retailers={this.state.retailers} />
-        <div class="container">
+        <div className="container">
           <h1 id="pageTitle" className="my-4">
             Today's Deals
           </h1>
@@ -116,7 +116,7 @@ class App extends Component {
                     class="btn btn-primary"
                     data-toggle="collapse"
                     href={"#" + deal._id}
-                    
+                    id = {"fromSearch" + deal._id}
                     role="button"
                     aria-expanded="false"
                     style={{ float: "right" }}

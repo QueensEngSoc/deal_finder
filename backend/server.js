@@ -11,8 +11,8 @@ const port = process.env.PORT || 5000;
 
 //connect to the database
 mongoose
-.connect('mongodb+srv://ESSDEV:essdev1@kdeals-gkguj.mongodb.net/KDeals', { useNewUrlParser: true })
-// .connect('mongodb+srv://essDev-Chris:Chris@kdeals-bu3de.mongodb.net/kDeals', { useNewUrlParser: true })
+// .connect('mongodb+srv://ESSDEV:essdev1@kdeals-gkguj.mongodb.net/KDeals', { useNewUrlParser: true })
+.connect('mongodb+srv://essDev-Chris:Chris@kdeals-bu3de.mongodb.net/kDeals', { useNewUrlParser: true })
 	.then(() => console.log(`Database connected successfully`))
 	.catch(err => console.log(err));
  

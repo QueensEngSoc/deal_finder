@@ -5,7 +5,7 @@ import AutoSuggest from "react-autosuggest";
 function renderSuggestion(s) {
 	return (
 		<li class="suggestions">
-			<a href={"#" + s._id} />
+			<a href={"#fromSearch" + s._id} />
 			{s.name}
 		</li>
 	);

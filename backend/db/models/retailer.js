@@ -38,6 +38,6 @@ const retailerSchema = new Schema({
 });
 
 //create model for todo
-const Retailer = mongoose.model("retailers", retailerSchema);
+const Retailer = mongoose.model("/Retailers", retailerSchema);
 
 module.exports = Retailer;

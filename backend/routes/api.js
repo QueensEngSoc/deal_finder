@@ -8,14 +8,14 @@ const router = express.Router();
 const Retailer = require('../db/models/retailer');
 // const Deal = require('../db/models/deal'); // This will use the deal schema
 
-router.get('/retailers', (req,res,next) => {
+router.get('/Retailers', (req,res,next) => {
     Retailer.find().then(data=>{
         res.json(data);
         console.log(JSON.stringify(data));
     });
 });
 
-router.post('/retailers', (req, res, next) => {
+router.post('/Retailers', (req, res, next) => {
     if (req.body.action) {
         Todo.create(req.body)
             .then(data => res.json(data))
@@ -27,7 +27,7 @@ router.post('/retailers', (req, res, next) => {
     }
 });
 
-router.delete('/retailers/:id', (req, res, next) => {
+router.delete('/Retailers/:name', (req, res, next) => {
     Todo.findOneAndDelete({ "_id": req.params.id })
         .then(data => res.json(data))
         .catch(next)
