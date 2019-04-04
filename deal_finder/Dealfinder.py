@@ -4,22 +4,21 @@ from bs4 import BeautifulSoup
 import json
 import urllib
 
-range = input("Range: ")#get the desired range from input
 
-url = "https://api.discountapi.com/v2/deals?api_key=qgqKNhnf&location=latitude:76.4860,longitude:%44.2312&radius=" + range
+url = "https://api.discountapi.com/v2/deals?api_key=qgqKNhnf"
+url = url + urllib.parse.urlencode({'radius': range}, {'location' : "latitude:76.4860,longitude:44.2312"})
 json_data = requests.get(url).json()#get data from the url
 
 
-i = 0
-while i<3:
+for each in json_data['deals']:
 
-    print(json_data['deals'][i]['deal']['title'])
-    print(json_data['deals'][i]['deal']['description'])
-    print(json_data['deals'][i]['deal']['discount_percentage'])
-    print(json_data['deals'][i]['deal']['image_url'])
+    print(each['deal']['title'])
+    print(each['deal']['description'])
+    print(each['deal']['discount_percentage'])
+    print(each['deal']['image_url'])
     print()
     # post request to mongo database
-    i=i+1
+    
 
 
 
