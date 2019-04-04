@@ -24,8 +24,6 @@ body {
 
 img {
 	object-fit: contain;
-	max-height: 30%;
-	max-width: 50%;
 }
 
 div {

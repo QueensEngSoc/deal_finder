@@ -5,8 +5,7 @@ import AutoSuggest from "react-autosuggest";
 function renderSuggestion(s) {
 	return (
 		<li class="suggestions">
-			<a href={"#fromSearch" + s._id} />
-			{s.name}
+			<a href={"#fromSearch" + s._id}>{s.name}</a>
 		</li>
 	);
 }
@@ -29,14 +28,13 @@ class Navbar extends React.Component {
 	// shorthand -- object with property: value -- value is what is passed through (squiggly)
 	onSuggestionsFetchRequested = ({ value }) => {
 		this.setState({
-			suggestions: this.props.retailers.filter((deal) => {
+			suggestions: this.props.retailers.filter(deal => {
 				return (
 					// deal.description.toLowerCase().includes(value.toLowerCase())||
 					deal.name.toLowerCase().includes(value.toLowerCase()) ||
 					deal.tags.toLowerCase().includes(value.toLowerCase())
 				);
-			}
-			)
+			})
 		});
 	};
 
