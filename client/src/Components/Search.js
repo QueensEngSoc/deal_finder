@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import AutoSearch from "./AutoSearch";
 
 class Search extends Component {
 	state = {
@@ -19,7 +20,7 @@ class Search extends Component {
 					ref={input => (this.search = input)}
 					onChange={this.handleInputChange}
 				/>
-				
+				<AutoSearch/>
 				<p>{this.state.query}</p>
 			</form>
 		);

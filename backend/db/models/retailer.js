@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 //create schema for todo
 const retailerSchema = new Schema({
-    id: {
+    _id: {
         type: String,
         required: [true, "The todo text field is required"]
     },
@@ -18,7 +18,7 @@ const retailerSchema = new Schema({
     contact: {
         type: String,
         required: [true, "No Contact Information"]
-    }
+    },
     tags: {
         type: String,
         required: [true, "The todo text field is required"]

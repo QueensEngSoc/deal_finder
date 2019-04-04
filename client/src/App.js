@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Navbar from "./Components/Navbar";
 import Gui from "./Components/Gui"; // Not used for now
 import Footer from "./Components/Footer";
-import DetailButton from "./Components/DetailButton";
 
 class App extends Component {
   constructor(props) {
@@ -33,7 +32,15 @@ class App extends Component {
     //     }]
     //   };
   }
-
+  // For adding tags ** untested
+  // addArray(arr) {
+  //   let temp = [];
+  //   for (let i = 0; i < arr.length; i ++) {
+  //     temp.push(arr[i]);
+  //   }
+  //   return (
+  //     <div>{buffer}</div>);
+  // }
   // Once component loads, pulls from database, will save in the state under deals
   // Information will later be used to replace a code segment
   // Add error path?
@@ -122,6 +129,8 @@ class App extends Component {
                   <br />
                   <strong>Contact: </strong>
                   {deal.contact}
+                  <strong>Tags: </strong>
+                  {deal.tags}
                 </div>
               </div>
             </div>
