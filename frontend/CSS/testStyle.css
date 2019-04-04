@@ -1,21 +1,5 @@
-/*!
- * Start Bootstrap - 1 Col Portfolio (https://startbootstrap.com/template-overviews/1-col-portfolio)
- * Copyright 2013-2018 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-1-col-portfolio/blob/master/LICENSE)
- */
-
 body {
-  padding-top: 54px;
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
-}
-
-.pagination {
-  margin-bottom: 15px;
+	margin: unset;
 }
 
 * {
@@ -24,8 +8,8 @@ body {
 
 img {
 	object-fit: contain;
-	max-height: 30%;
-	max-width: 50%;
+	height: 100%;
+	max-width: 100%;
 }
 
 div {
@@ -36,10 +20,6 @@ div {
 p {
 	font-family: "Garomond", sans-serif;
 	text-align: center;
-}
-
-.nav-item {
-	display: flex;
 }
 
 /* Images */
@@ -55,12 +35,11 @@ button {
 }
 
 /* Detail button - click to get details */
-.detailButton {
-	color: white;
-	background-color: #007bff;
+button.detailButton {
+	color: blue;
 	text-decoration: underline;
+	background-color: unset;
 	float: right;
-	display: none !important;
 }
 
 /* Parallax effect - for background if needed */
@@ -73,15 +52,6 @@ div.para {
 	background-attachment: fixed;
 	transform-style: preserve-3d;
 	position: sticky;
-
-}
-
-.suggestions {
-	color: white;
-}
-
-h3 {
-	display: inline;
 }
 
 /* An item */
@@ -95,6 +65,9 @@ div.item {
 	height: 20%;
 	background-color: rgba(51,51,51, 0.8);
 	justify-content: center;
+	align-items: unset;
+	padding-top: 5%;
+	position: unset;
 
 }
 
@@ -116,10 +89,10 @@ p.merchant {
 
 /* Normally hidden details */
 .detailPanel {
-	/*position: absolute;*/ /*If you want the panel to not displace stuff underneath (cover it) */
 	overflow: auto;
     color: white;
     font-size: 16px;
+    padding: 2%;
 }
 
 section.title {
@@ -161,17 +134,9 @@ section.content {
 
 
 #searchButton {
-	object-fit: contain;
-	height: 30px;
-	max-width: 100%;
-	background-image: url("/images/searchIcon.png");
-}
-.searchButton {
-	background-color: gray;
-}
-
-#navbar {
-	background-color: purple;
+	margin-right: 0;
+	margin-left: 1%;
+	max-height: 95%;
 }
 
 /* Block containing all the deals */
@@ -189,71 +154,54 @@ h2 {
 	text-align: center;
 }
 
-.dNameButton {
-	margin-bottom: 10px;
+/* Parallax dealing with backgrounds */
+#background {
+	background-image: url(../images/background.jpg);
+	/*background-color: purple;*/
 }
 
-.dealPic {
-
-}
 
 .inactive {
 	display: none !important;
 }
-.form-control-borderless {
-    border: none;
+
+/* Dropdown Button */
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
 }
 
-.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
-    border: none;
-    outline: none;
-    box-shadow: none;
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.col-md-5 p {
-	margin-bottom: unset;
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.col-md-7 {
-	display: flex;
-	justify-content: center;
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
 
-#searchBarD {
-	margin-left: -30px;
-	padding: unset;
-}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
 
-#pageTitle {
-	margin-top: 10% !important;
-	margin-bottom: unset !important;
-}
- 
-@media (max-width: 1000px) {
-
-	#pageTitle {
-		margin-top: 12% !important;
-	}
-}
-
-@media (max-width: 768px) {
-
-	#pageTitle {
-		margin-top: 15% !important;
-	}
-	.extraDetail{
-		display: none !important;
-	}
-	.detailButton{
-		display: block !important;
-	}
-	#searchBarD{
-		margin-left: unset;
-	}
-}
-
-@media (max-width: 450px) {
-
-	#pageTitle {
-		margin-top: 18% !important;
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}

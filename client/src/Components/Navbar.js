@@ -1,81 +1,122 @@
 import React from "react";
+// import Search from "./Search";
+import AutoSuggest from "react-autosuggest";
 
-function Navbar(props) {
+function renderSuggestion(s) {
 	return (
-		<nav
-			id="navbar"
-			className="navbar navbar-expand-lg navbar-dark fixed-top"
-		>
-			<div className="container">
-				<a className="navbar-brand" href="#">
-					<img src="../../Images/ITTeamLogoWhite.png" height="30px" />
-					KDeals
-					<img src="../../Images/ITTeamLogoWhite.png" height="30px" />
-				</a>
-				<button
-					className="navbar-toggler"
-					type="button"
-					data-toggle="collapse"
-					data-target="#navbarResponsive"
-					aria-controls="navbarResponsive"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span className="navbar-toggler-icon" />
-				</button>
-				<div className="collapse navbar-collapse" id="navbarResponsive">
-					<ul className="navbar-nav ml-auto">
-						<li className="nav-item active">
-							<a className="nav-link" href="#">
-								Home
-								<span className="sr-only">(current)</span>
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="#">
-								About
-							</a>
-						</li>
-
-						<li className="nav-item">
-							<link
-								rel="stylesheet"
-								href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-								integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-								crossOrigin="anonymous"
-							/>
-							<div className="row justify-content-center">
-								<div className="col-12 col-md-10 col-lg-8">
-									<form className="card card-sm">
-										<div
-											id="searchBarD"
-											className="card-body row no-gutters align-items-center"
-										>
-											<div className="col">
-												<input
-													className="searchBar form-control form-control-lg form-control-borderless"
-													type="search"
-													placeholder="Search..."
-												/>
-											</div>
-											<div className="col-auto">
-												<button
-													className="searchButton dbtn btn-lg"
-													type="submit"
-												>
-													Search
-												</button>
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<li class="suggestions">
+			<a href={"#" + s._id} />
+			{s.name}
+		</li>
 	);
+}
+
+class Navbar extends React.Component {
+	constructor(props) {
+		super(props);
+		this.search.bind(this);
+		this.state = {
+			suggestions: [],
+			searchValue: ""
+		};
+	}
+
+	search(e) {
+		// Prevents default reload
+		e.preventDefault();
+	}
+
+	// shorthand -- object with property: value -- value is what is passed through (squiggly)
+	onSuggestionsFetchRequested = ({ value }) => {
+		this.setState({
+			suggestions: this.props.retailers.filter((deal) => {
+				return (
+					// deal.description.toLowerCase().includes(value.toLowerCase())||
+					deal.name.toLowerCase().includes(value.toLowerCase()) ||
+					deal.tags.toLowerCase().includes(value.toLowerCase())
+				);
+			}
+			)
+		});
+	};
+
+	onSuggestionsClearRequested = () => {
+		this.setState({ suggestions: [] });
+	};
+
+	render() {
+		console.log(JSON.stringify(this.state));
+
+		const inputProps = {
+			placeholder: "Search...",
+			value: this.state.searchValue,
+			onChange: (event, { newValue }) =>
+				this.setState({ searchValue: newValue })
+		};
+
+		return (
+			<nav
+				id="navbar"
+				className="navbar navbar-expand-lg navbar-dark fixed-top"
+			>
+				<div className="container">
+					<a className="navbar-brand" href="#">
+						<img
+							src="../../Images/ITTeamLogoWhite.png"
+							height="30px"
+						/>
+						KDeals
+						<img
+							src="../../Images/ITTeamLogoWhite.png"
+							height="30px"
+						/>
+					</a>
+					<button
+						className="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarResponsive"
+						aria-controls="navbarResponsive"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span className="navbar-toggler-icon" />
+					</button>
+					<div
+						className="collapse navbar-collapse"
+						id="navbarResponsive"
+					>
+						<ul className="navbar-nav ml-auto">
+							<li className="nav-item active">
+								<a className="nav-link" href="#">
+									Home
+									<span className="sr-only">(current)</span>
+								</a>
+							</li>
+							<li className="nav-item">
+								<a className="nav-link" href="#">
+									About
+								</a>
+							</li>
+
+							<AutoSuggest
+								suggestions={this.state.suggestions}
+								onSuggestionsFetchRequested={
+									this.onSuggestionsFetchRequested
+								}
+								onSuggestionsClearRequested={
+									this.onSuggestionsClearRequested
+								}
+								getSuggestionValue={s => s.name}
+								renderSuggestion={renderSuggestion}
+								inputProps={inputProps}
+							/>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		);
+	}
 }
 
 export default Navbar;
