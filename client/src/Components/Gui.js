@@ -1,11 +1,22 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 class Gui extends React.Component {
-  // showDetails(num) {
-  //   let extraDetail = document.querySelectorAll("extraDetail");
-  //   let normalDetail = document.querySelectorAll("normalDetail");
-  //   extradetail[num].classlist.remove("inactive");
-  //   normalDetail[num].classlist.add("inactive");
+  constructor(props) {
+    super(props);
+    // this.state={deals:[]};
+    this.state={deals: [{merchant: "merchant1",dealName: "dealname1", img: "imagePath1", details: "details1"},{merchant: "merchant2",dealName: "dealname2", img: "imagePath2", details: "details2"},{merchant: "merchant3",dealName: "dealname3", img: "imagePath3", details: "details3"}]};
+    // this.showDetails.bind(this);
+    // this.node = ReactDOM.findDOMNode(this);
+  }
+  // showDetails () {
+  //   let node= document.querySelector(".container")
+  //   // let node = ReactDOM.findDOMNode(this);
+  //   console.log(node)
+  //   let extraDetail = node.querySelectorAll(".extraDetail");
+  //   let normalDetail = node.querySelectorAll(".normalDetail");
+  //   extraDetail[0].classlist.remove("inactive");
+  //   normalDetail[0].classlist.add("inactive");
   // }
 
   render() {
@@ -31,7 +42,7 @@ class Gui extends React.Component {
           <div className="col-md-5">
             <div className="dNameButton">
               <h3>Brass Pub</h3>
-              <div className="detailButton btn btn-primary" href="#">
+              <div className="detailButton btn btn-primary" href="#" >
                 View Details
               </div>
             </div>
@@ -114,6 +125,11 @@ class Gui extends React.Component {
       </div>
     );
   }
+  componentDidMount() {
+    this.node=ReactDOM.findDOMNode(this);
+    console.log(this.node);
+  }
+  
 }
 
 export default Gui;
