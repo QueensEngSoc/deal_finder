@@ -99,7 +99,7 @@ class App extends Component {
             <small>Kingston Area</small>
           </h1>
           {this.state.retailers.map(deal => (
-            <div className="row">
+            <div className="row" style={{ marginBottom: "10px" }}>
               <div className="col-md-7">
                 <a href="#">
                   <img
@@ -116,9 +116,10 @@ class App extends Component {
                     class="btn btn-primary"
                     data-toggle="collapse"
                     href={"#" + deal._id}
+                    
                     role="button"
                     aria-expanded="false"
-                    style={{float:'right'}}
+                    style={{ float: "right" }}
                   >
                     View Details
                   </a>
@@ -129,6 +130,7 @@ class App extends Component {
                   <br />
                   <strong>Contact: </strong>
                   {deal.contact}
+                  <br />
                   <strong>Tags: </strong>
                   {deal.tags}
                 </div>

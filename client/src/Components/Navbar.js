@@ -4,7 +4,10 @@ import AutoSuggest from "react-autosuggest";
 
 function renderSuggestion(s) {
 	return (
-		<li>{s.name}</li>
+		<li class="suggestions">
+			<a href={"#" + s._id} />
+			{s.name}
+		</li>
 	);
 }
 
@@ -25,21 +28,31 @@ class Navbar extends React.Component {
 
 	// shorthand -- object with property: value -- value is what is passed through (squiggly)
 	onSuggestionsFetchRequested = ({ value }) => {
-		this.setState({ suggestions: this.props.retailers.filter(deal => deal.name.toLowerCase().includes(value.toLowerCase())) })
+		this.setState({
+			suggestions: this.props.retailers.filter((deal) => {
+				return (
+					// deal.description.toLowerCase().includes(value.toLowerCase())||
+					deal.name.toLowerCase().includes(value.toLowerCase()) ||
+					deal.tags.toLowerCase().includes(value.toLowerCase())
+				);
+			}
+			)
+		});
 	};
 
 	onSuggestionsClearRequested = () => {
-		this.setState({ suggestions: [] })
+		this.setState({ suggestions: [] });
 	};
 
 	render() {
 		console.log(JSON.stringify(this.state));
 
 		const inputProps = {
-			placeholder: "Test",
+			placeholder: "Search...",
 			value: this.state.searchValue,
-			onChange: (event, {newValue}) => this.setState({ searchValue: newValue })
-		}
+			onChange: (event, { newValue }) =>
+				this.setState({ searchValue: newValue })
+		};
 
 		return (
 			<nav
@@ -85,18 +98,22 @@ class Navbar extends React.Component {
 									About
 								</a>
 							</li>
-							
-							<AutoSuggest suggestions={this.state.suggestions}
-							onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-							onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-							getSuggestionValue={s => s.name}
-							renderSuggestion={renderSuggestion}
-							inputProps={inputProps} />
 
+							<AutoSuggest
+								suggestions={this.state.suggestions}
+								onSuggestionsFetchRequested={
+									this.onSuggestionsFetchRequested
+								}
+								onSuggestionsClearRequested={
+									this.onSuggestionsClearRequested
+								}
+								getSuggestionValue={s => s.name}
+								renderSuggestion={renderSuggestion}
+								inputProps={inputProps}
+							/>
 						</ul>
 					</div>
 				</div>
-				
 			</nav>
 		);
 	}

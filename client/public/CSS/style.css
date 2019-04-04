@@ -76,6 +76,10 @@ div.para {
 
 }
 
+.suggestions {
+	color: white;
+}
+
 h3 {
 	display: inline;
 }
