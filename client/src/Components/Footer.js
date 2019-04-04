@@ -6,7 +6,7 @@ function Footer(props) {
 			<div className="container">
 				<p className="m-0 text-center text-white">
 					Copyright &copy; Queen's University <br />Engineering
-					Society Software Development <br />Team 1
+					Society Software Development <br />Team 1 <br/> Chris Caicedo | Husnain Haider | Andrew McCleveland | Jamie Won
 				</p>
 			</div>
 		</footer>
