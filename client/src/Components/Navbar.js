@@ -1,11 +1,21 @@
 import React from "react";
 import Search from "./Search";
+import AutoSuggest from "react-autosuggest";
+
+function renderSuggestion(s) {
+	return (
+		<li>{s.name}</li>
+	);
+}
 
 class Navbar extends React.Component {
 	constructor(props) {
 		super(props);
 		this.search.bind(this);
-		// this.state={deals: []}; // sets state to empty array
+		this.state = {
+			suggestions: [],
+			searchValue: ""
+		};
 	}
 
 	search(e) {
@@ -13,7 +23,24 @@ class Navbar extends React.Component {
 		e.preventDefault();
 	}
 
+	// shorthand -- object with property: value -- value is what is passed through (squiggly)
+	onSuggestionsFetchRequested = ({ value }) => {
+		this.setState({ suggestions: this.props.retailers.filter(deal => deal.name.toLowerCase().includes(value.toLowerCase())) })
+	};
+
+	onSuggestionsClearRequested = () => {
+		this.setState({ suggestions: [] })
+	};
+
 	render() {
+		console.log(JSON.stringify(this.state));
+
+		const inputProps = {
+			placeholder: "Test",
+			value: this.state.searchValue,
+			onChange: (event, {newValue}) => this.setState({ searchValue: newValue })
+		}
+
 		return (
 			<nav
 				id="navbar"
@@ -59,7 +86,12 @@ class Navbar extends React.Component {
 								</a>
 							</li>
 							
-							<Search/>
+							<AutoSuggest suggestions={this.state.suggestions}
+							onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+							onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+							getSuggestionValue={s => s.name}
+							renderSuggestion={renderSuggestion}
+							inputProps={inputProps} />
 
 						</ul>
 					</div>

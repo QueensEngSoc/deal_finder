@@ -90,7 +90,7 @@ class App extends Component {
   render() {
     return (
       <div className="entire">
-        <Navbar />
+        <Navbar retailers={this.state.retailers} />
         <div class="container">
           <h1 id="pageTitle" className="my-4">
             Today's Deals
