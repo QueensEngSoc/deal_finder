@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import urllib
-from pymongo import MongoClient
+#from pymongo import MongoClient
 
 
 range = input("Range: ")  # get the desired range from input
